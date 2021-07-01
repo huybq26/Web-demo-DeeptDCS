@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { AppBar, Toolbar, Button } from '@material-ui/core';
 import { NavigationStyles } from './Navigation.styles';
+import { useHistory } from 'react-router-dom';
 
 export default function Navigation() {
   const classes = NavigationStyles();
+  const history = useHistory();
+
+  const handleOnClick = useCallback((url) => history.push(url), [history]);
+
   return (
-    <AppBar style={{}}>
-      <div style={{}}>
+    <AppBar>
+      <div>
         <Toolbar
           style={{
             backgroundColor: '#343a40',
@@ -22,23 +27,46 @@ export default function Navigation() {
               alignItems: 'center',
             }}
           >
-            <Button className={classes.projectButton}>
+            <Button
+              className={classes.projectButton}
+              onClick={() => handleOnClick('/home')}
+            >
               <h1>
                 <i class='fas fa-code'></i> {'  '}tDCS Project
               </h1>
             </Button>
             <ul className={classes.navButton}>
               <li>
-                <Button className={classes.button}>Home</Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => handleOnClick('/home')}
+                >
+                  Home
+                </Button>
               </li>
               <li>
-                <Button className={classes.button}>Tutorial</Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => handleOnClick('/home')}
+                >
+                  Tutorial
+                </Button>
               </li>
               <li>
-                <Button className={classes.button}>Input</Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => handleOnClick('/input')}
+                >
+                  Input
+                </Button>
               </li>
               <li>
-                <Button className={classes.button}>Results</Button>
+                <Button
+                  className={classes.button}
+                  onClick={() => handleOnClick('/result')}
+                >
+                  Results
+                </Button>
               </li>
             </ul>
           </div>
