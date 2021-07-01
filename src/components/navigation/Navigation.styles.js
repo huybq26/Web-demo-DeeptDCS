@@ -3,28 +3,25 @@ import { makeStyles } from '@material-ui/core';
 export const NavigationStyles = makeStyles({
   navButton: {
     display: 'flex',
-    // flexDirection: 'row',
-    // alignItems: 'right',
-    // justifyContent: 'right',
     listStyle: 'none',
   },
   projectButton: {
     color: 'white',
     fontSize: 10,
     fontWeight: 'normal',
-    fontFamily: 'railway',
+    fontFamily: 'Raleway',
     '&:hover': {
       color: '#17a2b8',
     },
+    fontWeight: 'normal',
   },
   button: {
     display: 'flex',
     color: 'white',
-    fontFamily: 'railway',
+    fontFamily: 'Raleway',
     fontSize: 14,
     '&:hover': {
       color: '#17a2b8',
     },
-    // cursor: 'pointer',
   },
 });
