@@ -44,24 +44,24 @@ export default function Home() {
         >
           <h1
             style={{
-              fontSize: '3.5rem',
+              fontSize: '3.7rem',
               lineHeight: 1.2,
               marginBottom: '1rem',
               fontFamily: 'Raleway',
-              paddingBottom: 5,
+              marginBottom: 15,
               marginTop: 20,
             }}
           >
             TDCS Project
           </h1>
-          <p style={{ fontSize: 25, marginTop: -10, fontFamily: 'Raleway' }}>
-            An electromagnetic analysis research on brain signals using Deep
-            Learning techniques
+          <p style={{ fontSize: 26.5, marginTop: 0, fontFamily: 'Raleway' }}>
+            An electromagnetic research on brain signals using Deep Learning
+            techniques
             <div
               style={{
                 display: 'flex',
                 justifyContent: 'center',
-                paddingTop: 20,
+                marginTop: 35,
                 textAlign: 'center',
               }}
             >
@@ -76,6 +76,7 @@ export default function Home() {
                   textAlign: 'center',
                   fontFamily: 'Raleway',
                 }}
+                onClick={() => handleOnClick('/introduction')}
               >
                 About us
               </Button>
