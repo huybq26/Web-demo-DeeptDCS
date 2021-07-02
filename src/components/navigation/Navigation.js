@@ -47,9 +47,9 @@ export default function Navigation() {
               <li>
                 <Button
                   className={classes.button}
-                  onClick={() => handleOnClick('/home')}
+                  onClick={() => handleOnClick('/introduction')}
                 >
-                  Tutorial
+                  Intro
                 </Button>
               </li>
               <li>
