@@ -52,7 +52,7 @@ export default function Home() {
               marginTop: 20,
             }}
           >
-            TDCS Project
+            DeeptDCS
           </h1>
           <p style={{ fontSize: 26.5, marginTop: 0, fontFamily: 'Raleway' }}>
             An electromagnetic research on brain signals using Deep Learning
