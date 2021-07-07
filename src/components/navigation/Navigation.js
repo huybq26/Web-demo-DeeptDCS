@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { AppBar, Toolbar, Button } from '@material-ui/core';
+import { AppBar, Toolbar, Button, Typography } from '@material-ui/core';
 import { NavigationStyles } from './Navigation.styles';
 import { useHistory } from 'react-router-dom';
 
@@ -31,8 +31,8 @@ export default function Navigation() {
               className={classes.projectButton}
               onClick={() => handleOnClick('/home')}
             >
-              <h1>
-                <i class='fas fa-code'></i> {'  '}tDCS Project
+              <h1 style={{ textTransform: 'none' }}>
+                <i class='fas fa-code'></i> {'  '}DeeptDCS
               </h1>
             </Button>
             <ul className={classes.navButton}>
