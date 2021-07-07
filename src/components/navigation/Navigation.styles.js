@@ -7,13 +7,11 @@ export const NavigationStyles = makeStyles({
   },
   projectButton: {
     color: 'white',
-    fontSize: 10,
-    fontWeight: 'normal',
+    fontSize: 12,
     fontFamily: 'Raleway',
     '&:hover': {
       color: '#17a2b8',
     },
-    fontWeight: 'normal',
   },
   button: {
     display: 'flex',
