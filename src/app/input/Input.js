@@ -11,8 +11,9 @@ import {
 import { InputStyles } from './Input.styles';
 import UploadFile from './UploadFile';
 import Result from './Result';
+import Download from './Download';
 
-const steps = ['Upload Files', 'Results'];
+const steps = ['Results', 'Download'];
 
 export default function Input() {
   const classes = InputStyles();
@@ -41,26 +42,52 @@ export default function Input() {
       <React.Fragment>
         <div style={{ position: 'relative' }}>
           {activeStep == 0 ? (
-            <UploadFile step={0} activeStep={activeStep} />
+            <Result step={0} activeStep={activeStep} />
           ) : (
-            <Result step={1} activeStep={activeStep} />
+            <Download step={1} activeStep={activeStep} />
           )}
         </div>
         <br></br>
         <div className={classes.buttonContainer}>
-          {activeStep !== 0 && (
-            <Button onClick={handleBack} clasName={classes.button}>
-              Back
+          {activeStep === 0 && (
+            <Button
+              onClick={handleNext}
+              clasName={classes.button}
+              color='primary'
+              variant='contained'
+            >
+              Download 3D and 4D figures
             </Button>
           )}
-          <Button
+          {activeStep !== 0 && (
+            <Button
+              onClick={handleBack}
+              clasName={classes.button}
+              color='primary'
+              variant='contained'
+            >
+              See 2D figures
+            </Button>
+          )}
+          {/* <Button
             variant='contained'
             color='primary'
             onClick={handleNext}
             className={classes.button}
           >
             {activeStep === 0 ? 'Next' : 'Save'}
-          </Button>
+          </Button> */}
+          <div style={{ marginLeft: 10, marginRight: 10 }}>
+            <a href='http://localhost:5000/input'>
+              <Button
+                clasName={classes.button}
+                color='secondary'
+                variant='contained'
+              >
+                Upload another data
+              </Button>
+            </a>
+          </div>
         </div>
       </React.Fragment>
 
